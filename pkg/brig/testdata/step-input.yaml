@@ -1,5 +1,5 @@
 install:
-  - skeletor:
+  - brig:
       description: "Summon Minion"
       arguments:
       - "man-e-faces"

@@ -1,11 +1,11 @@
 package main
 
 import (
-	"get.porter.sh/mixin/skeletor/pkg/skeletor"
 	"github.com/spf13/cobra"
+	"github.com/vdice/porter-brig-mixin/pkg/brig"
 )
 
-func buildSchemaCommand(m *skeletor.Mixin) *cobra.Command {
+func buildSchemaCommand(m *brig.Mixin) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "schema",
 		Short: "Print the json schema for the mixin",

@@ -1,4 +1,4 @@
-package skeletor
+package brig
 
 import (
 	"io/ioutil"

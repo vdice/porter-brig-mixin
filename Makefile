@@ -1,5 +1,5 @@
-MIXIN = skeletor
-PKG = get.porter.sh/mixin/$(MIXIN)
+MIXIN = brig
+PKG = github.com/vdice/porter-brig-mixin
 SHELL = bash
 
 GO = GO111MODULE=on go
@@ -76,26 +76,15 @@ test-integration: xbuild
 	$(GO) test -tags=integration ./tests/...
 
 publish: bin/porter$(FILE_EXT)
-	# The following demonstrates how to publish a mixin. As an example, we show how to publish to azure.
-	# The porter mixins feed generate command is used to build an ATOM feed for sharing mixins once published
-
-	# AZURE_STORAGE_CONNECTION_STRING will be used for auth in the following commands
-	#if [[ "$(PERMALINK)" == "latest" ]]; then \
-	#	az storage blob upload-batch -d porter/mixins/$(MIXIN)/$(VERSION) -s $(BINDIR)/$(VERSION); \
-	#	az storage blob upload-batch -d porter/mixins/$(MIXIN)/$(PERMALINK) -s $(BINDIR)/$(VERSION); \
-	#else \
-	#	mv $(BINDIR)/$(VERSION) $(BINDIR)/$(PERMALINK); \
-	#	az storage blob upload-batch -d porter/mixins/$(MIXIN)/$(PERMALINK) -s $(BINDIR)/$(PERMALINK); \
-	#fi
-
-	# Generate the mixin feed
-	#az storage blob download -c porter -n atom.xml -f bin/atom.xml
+	# generate an updated atom feed
 	bin/porter mixins feed generate -d bin/mixins -f bin/atom.xml -t build/atom-template.xml
-	#az storage blob upload -c porter -n atom.xml -f bin/atom.xml
+	# copy it into the docs/ folder, which is served via GH Pages
+	cp bin/atom.xml docs/
 
 bin/porter$(FILE_EXT):
 	curl -fsSLo bin/porter$(FILE_EXT) https://cdn.porter.sh/canary/porter-$(CLIENT_PLATFORM)-$(CLIENT_ARCH)$(FILE_EXT)
 	chmod +x bin/porter$(FILE_EXT)
+
 install:
 	mkdir -p $(PORTER_HOME)/mixins/$(MIXIN)/runtimes/
 	install $(BINDIR)/$(MIXIN)$(FILE_EXT) $(PORTER_HOME)/mixins/$(MIXIN)/$(MIXIN)$(FILE_EXT)
@@ -105,4 +94,4 @@ clean: clean-packr
 	-rm -fr bin/
 
 clean-packr: packr2
-	cd pkg/skeletor && packr2 clean
+	cd pkg/brig && packr2 clean

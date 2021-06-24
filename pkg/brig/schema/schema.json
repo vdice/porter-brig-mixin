@@ -4,40 +4,40 @@
     "installStep": {
       "type": "object",
       "properties": {
-        "skeletor": {"$ref": "#/definitions/skeletor"}
+        "brig": {"$ref": "#/definitions/brig"}
       },
       "required": [
-        "skeletor"
+        "brig"
       ],
       "additionalProperties": false
     },
     "upgradeStep": {
       "type": "object",
       "properties": {
-        "skeletor": {"$ref": "#/definitions/skeletor"}
+        "brig": {"$ref": "#/definitions/brig"}
       },
       "required": [
-        "skeletor"
+        "brig"
       ],
       "additionalProperties": false
     },
     "invokeStep": {
       "type": "object",
       "properties": {
-        "skeletor": {"$ref": "#/definitions/skeletor"}
+        "brig": {"$ref": "#/definitions/brig"}
       },
       "required": [
-        "skeletor"
+        "brig"
       ],
       "additionalProperties": false
     },
     "uninstallStep": {
       "type": "object",
       "properties": {
-        "skeletor": {"$ref": "#/definitions/skeletor"}
+        "brig": {"$ref": "#/definitions/brig"}
       },
       "required": [
-        "skeletor"
+        "brig"
       ],
       "additionalProperties": false
     },
@@ -74,7 +74,7 @@
         ]
       }
     },
-    "skeletor": {
+    "brig": {
       "type": "object",
       "properties": {
         "description": {

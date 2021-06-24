@@ -1,4 +1,4 @@
-module get.porter.sh/mixin/skeletor
+module github.com/vdice/porter-brig-mixin
 
 go 1.13
 

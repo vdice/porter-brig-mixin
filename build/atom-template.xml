@@ -1,24 +1,24 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://porter.sh</id>
-    <title>Porter Mixins</title>
+    <id>https://github.com/vdice/porter-brig-mixin</id>
+    <title>Porter brig Mixin</title>
     <updated>{{Updated}}</updated>
-    <link rel="self" href="https://cdn.porter.sh/mixins/atom.xml"/>
+    <link rel="self" href="https://vdice.github.io/porter-brig-mixin/atom.xml"/>
     <author>
-        <name>Porter Authors</name>
-        <uri>https://porter.sh/mixins</uri>
+        <name>Vaughn Dice</name>
+        <uri>https://github.com/vdice/porter-brig-mixin</uri>
     </author>
     {{#Mixins}}
     <category term="{{.}}"/>
     {{/Mixins}}
     {{#Entries}}
     <entry>
-        <id>https://cdn.porter.sh/mixins/{{Mixin}}/{{Version}}</id>
+        <id>https://github.com/vdice/porter-brig-mixin/releases/download/{{Version}}/{{Mixin}}</id>
         <title>{{Mixin}} @ {{Version}}</title>
         <updated>{{Updated}}</updated>
         <category term="{{Mixin}}"/>
         <content>{{Version}}</content>
         {{#Files}}
-        <link rel="download" href="https://cdn.porter.sh/mixins/{{Mixin}}/{{Version}}/{{File}}" />
+        <link rel="download" href="https://github.com/vdice/porter-brig-mixin/releases/download/{{Version}}/{{File}}" />
         {{/Files}}
     </entry>
     {{/Entries}}
