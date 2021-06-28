@@ -1,7 +1,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://github.com/vdice/porter-brig-mixin</id>
     <title>Porter brig Mixin</title>
-    <updated>2021-06-25T21:20:04Z</updated>
+    <updated>2021-06-28T18:54:59Z</updated>
     <link rel="self" href="https://vdice.github.io/porter-brig-mixin/atom.xml"/>
     <author>
         <name>Vaughn Dice</name>
@@ -9,13 +9,13 @@
     </author>
     <category term="brig"/>
     <entry>
-        <id>https://github.com/vdice/porter-brig-mixin/releases/download/v0/brig</id>
-        <title>brig @ v0</title>
-        <updated>2021-06-25T21:20:04Z</updated>
+        <id>https://github.com/vdice/porter-brig-mixin/releases/download/v0.1.0/brig</id>
+        <title>brig @ v0.1.0</title>
+        <updated>2021-06-28T18:54:59Z</updated>
         <category term="brig"/>
-        <content>v0</content>
-        <link rel="download" href="https://github.com/vdice/porter-brig-mixin/releases/download/v0/brig-darwin-amd64" />
-        <link rel="download" href="https://github.com/vdice/porter-brig-mixin/releases/download/v0/brig-linux-amd64" />
-        <link rel="download" href="https://github.com/vdice/porter-brig-mixin/releases/download/v0/brig-windows-amd64.exe" />
+        <content>v0.1.0</content>
+        <link rel="download" href="https://github.com/vdice/porter-brig-mixin/releases/download/v0.1.0/brig-darwin-amd64" />
+        <link rel="download" href="https://github.com/vdice/porter-brig-mixin/releases/download/v0.1.0/brig-linux-amd64" />
+        <link rel="download" href="https://github.com/vdice/porter-brig-mixin/releases/download/v0.1.0/brig-windows-amd64.exe" />
     </entry>
 </feed>

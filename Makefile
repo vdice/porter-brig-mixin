@@ -82,6 +82,7 @@ publish: bin/porter$(FILE_EXT)
 	cp bin/atom.xml docs/
 
 bin/porter$(FILE_EXT):
+	mkdir -p $(BINDIR)
 	curl -fsSLo bin/porter$(FILE_EXT) https://cdn.porter.sh/canary/porter-$(CLIENT_PLATFORM)-$(CLIENT_ARCH)$(FILE_EXT)
 	chmod +x bin/porter$(FILE_EXT)
 
