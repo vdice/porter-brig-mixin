@@ -1,0 +1,41 @@
+name: hello-brig
+description: "An example Porter bundle using the brig mixin to interact with a Brigade v2 server"
+version: 0.1.0
+registry: example.com
+
+mixins:
+  - brig:
+      clientVersion: v2.0.0-alpha.5
+
+credentials:
+  - name: brigade-config
+    required: true
+    path: /root/.brigade/config
+
+install:
+  - brig:
+      description: Create Brigade v2 project
+      arguments:
+        - project
+        - create
+        - -f
+        - /cnab/app/brigade-project.yaml
+
+upgrade:
+  - brig:
+      description: Update Brigade v2 project
+      arguments:
+        - project
+        - update
+        - -f
+        - /cnab/app/brigade-project.yaml
+
+uninstall:
+  - brig:
+      description: Delete Brigade v2 project
+      arguments:
+        - project
+        - delete
+        - -p
+        - hello-brig
+        - --yes
