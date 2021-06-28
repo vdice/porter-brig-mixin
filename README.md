@@ -13,8 +13,7 @@ mixin via its feed URL.
 
 ```console
 $ porter mixin install brig --feed-url https://vdice.github.io/porter-brig-mixin/atom.xml
-installed brig mixin
-brig v0.1.0 (f5bb0bb) by Vaughn Dice
+installed brig mixin v0.1.0 (d605dfc)
 ```
 
 Now you are ready to use the mixin in a Porter bundle!
